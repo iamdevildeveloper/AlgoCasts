@@ -8,12 +8,20 @@
 
 function reverse(str) {
     var explodedStr = str.split('');
-    var arrayLength = explodedStr.length - 1;
     var reversedName = '';
-    for (let index = arrayLength; index >= 0; index--) {
-        reversedName += explodedStr[index];
-    }
+    // Loop code method
+    // var arrayLength = explodedStr.length - 1;
+    // for (let index = arrayLength; index >= 0; index--) {
+    //     reversedName += explodedStr[index];
+    // }
+
+    // Array method
+    var reveredArray = explodedStr.reverse()
+    reversedName = reveredArray.join('');
     return reversedName;
+
+    // Single line code
+    return str.split('').reverse().join('');
 }
 
 module.exports = reverse;
